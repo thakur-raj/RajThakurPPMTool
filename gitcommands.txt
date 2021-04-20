@@ -1,0 +1,131 @@
+Microsoft Windows [Version 10.0.19042.906]
+(c) Microsoft Corporation. All rights reserved.
+
+E:\eclipse\PPMToolFullStack>git init
+Initialized empty Git repository in E:/eclipse/PPMToolFullStack/.git/
+
+E:\eclipse\PPMToolFullStack>git add .
+warning: LF will be replaced by CRLF in ppmtool/.gitignore.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in ppmtool/.mvn/wrapper/MavenWrapperDownloader.java.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in ppmtool/.mvn/wrapper/maven-wrapper.properties.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in ppmtool/mvnw.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in ppmtool/mvnw.cmd.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in ppmtool/pom.xml.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in ppmtool/src/main/java/raj/thakur/ppmtool/PpmtoolApplication.java.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in ppmtool/src/main/resources/application.properties.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in ppmtool/src/test/java/raj/thakur/ppmtool/PpmtoolApplicationTests.java.
+The file will have its original line endings in your working directory
+
+E:\eclipse\PPMToolFullStack>git commit -m "first commit"
+[master (root-commit) 81350c2] first commit
+ 10 files changed, 732 insertions(+)
+ create mode 100644 ppmtool/.gitignore
+ create mode 100644 ppmtool/.mvn/wrapper/MavenWrapperDownloader.java
+ create mode 100644 ppmtool/.mvn/wrapper/maven-wrapper.jar
+ create mode 100644 ppmtool/.mvn/wrapper/maven-wrapper.properties
+ create mode 100644 ppmtool/mvnw
+ create mode 100644 ppmtool/mvnw.cmd
+ create mode 100644 ppmtool/pom.xml
+ create mode 100644 ppmtool/src/main/java/raj/thakur/ppmtool/PpmtoolApplication.java
+ create mode 100644 ppmtool/src/main/resources/application.properties
+ create mode 100644 ppmtool/src/test/java/raj/thakur/ppmtool/PpmtoolApplicationTests.java
+
+E:\eclipse\PPMToolFullStack>git remote add origin git@github.com:thakur-raj/RajThakurPPMTool.git
+
+E:\eclipse\PPMToolFullStack>git push -u origin master
+Enumerating objects: 27, done.
+Counting objects: 100% (27/27), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (17/17), done.
+Writing objects: 100% (27/27), 52.49 KiB | 325.00 KiB/s, done.
+Total 27 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:thakur-raj/RajThakurPPMTool.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+E:\eclipse\PPMToolFullStack>git branch
+* master
+
+E:\eclipse\PPMToolFullStack>git branch branch0
+
+E:\eclipse\PPMToolFullStack>git branch
+  branch0
+* master
+
+E:\eclipse\PPMToolFullStack>git checkout branch0
+Switched to branch 'branch0'
+
+E:\eclipse\PPMToolFullStack>git branch
+* branch0
+  master
+
+E:\eclipse\PPMToolFullStack>git status
+On branch branch0
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ppmtool/src/main/java/raj/thakur/ppmtool/domain/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+E:\eclipse\PPMToolFullStack>git add .
+
+E:\eclipse\PPMToolFullStack>git status
+On branch branch0
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   ppmtool/src/main/java/raj/thakur/ppmtool/domain/Project.java
+
+
+E:\eclipse\PPMToolFullStack>git commit -m "Project Object"
+[branch0 6048ff2] Project Object
+ 1 file changed, 5 insertions(+)
+ create mode 100644 ppmtool/src/main/java/raj/thakur/ppmtool/domain/Project.java
+
+E:\eclipse\PPMToolFullStack>git push
+fatal: The current branch branch0 has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin branch0
+
+
+E:\eclipse\PPMToolFullStack>git push --set-upstream origin branch0
+Enumerating objects: 19, done.
+Counting objects: 100% (19/19), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (11/11), 779 bytes | 129.00 KiB/s, done.
+Total 11 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'branch0' on GitHub by visiting:
+remote:      https://github.com/thakur-raj/RajThakurPPMTool/pull/new/branch0
+remote:
+To github.com:thakur-raj/RajThakurPPMTool.git
+ * [new branch]      branch0 -> branch0
+Branch 'branch0' set up to track remote branch 'branch0' from 'origin'.
+
+E:\eclipse\PPMToolFullStack>git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+E:\eclipse\PPMToolFullStack>git merge branch0
+Updating 81350c2..6048ff2
+Fast-forward
+ ppmtool/src/main/java/raj/thakur/ppmtool/domain/Project.java | 5 +++++
+ 1 file changed, 5 insertions(+)
+ create mode 100644 ppmtool/src/main/java/raj/thakur/ppmtool/domain/Project.java
+
+E:\eclipse\PPMToolFullStack>git push
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:thakur-raj/RajThakurPPMTool.git
+   81350c2..6048ff2  master -> master
+
+E:\eclipse\PPMToolFullStack>
